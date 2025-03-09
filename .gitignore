@@ -1,0 +1,63 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+env/
+
+# Azure Functions
+local.settings.json
+bin/
+obj/
+.python_packages/
+__blobstorage__
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Project specific
+.env
+*.mp4
+*.avi
+*.mov
+yolov4.weights
+logs/
+temp/
+
+# Azure credentials and secrets
+*.publishsettings
+*.pfx
+ServicePrincipalCreds.json
+
+# Azurite local database files
+__azurite_db_blob__.json
+__azurite_db_queue__.json
+__azurite_db_queue_extent__.json
+__azurite_db_table__.json
+__azurite_db_blob_extent__.json
+AzuriteConfig
+.azurite

@@ -1,0 +1,1 @@
+"""Common utilities and models for the Traffic Monitoring System."""

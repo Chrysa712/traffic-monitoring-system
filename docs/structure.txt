@@ -1,0 +1,54 @@
+traffic-monitoring-system/
+├── README.md                             # Project documentation
+├── requirements.txt                      # Main project dependencies
+├── .env                                  # Environment variables (not in version control)
+│
+├── src/                                  # Main source code
+│   ├── __init__.py
+│   │
+│   ├── common/                           # Shared code
+│   │   ├── __init__.py
+│   │   ├── models.py                     # Data models
+│   │   └── config.py                     # Configuration
+│   │
+│   ├── blob_storage/                     # Blob storage
+│   │   ├── __init__.py
+│   │   └── blob_service.py               # Blob service
+│   │
+│   ├── event_hub/                        # Event Hub 
+│   │   ├── __init__.py
+│   │   └── event_service.py              # Event Hub client
+│   │
+│   ├── cosmos_db/                        # Cosmos DB
+│   │   ├── __init__.py
+│   │   └── cosmos_service.py             # Cosmos DB client
+│   │
+│   └── video_processing/                 # Video processing
+│       ├── __init__.py
+│       ├── preprocessor.py               # Video segmentation
+│       └── analyzer.py                   # Vehicle detection and tracking
+│
+├── azure_functions/                      # Azure Functions
+│   ├── host.json                         # Function app config
+│   ├── local.settings.json               # Local settings
+│   │
+│   ├── video_preprocessor/               # Blob trigger function
+│   │   ├── __init__.py                   # Function code
+│   │   ├── function.json                 # Trigger config
+│   │   └── requirements.txt              # Function dependencies
+│   │
+│   └── speed_alert/                      # Alert function
+│       ├── __init__.py
+│       ├── function.json
+│       └── requirements.txt
+│
+├── container_app/                        # Container App for processing
+│   ├── Dockerfile
+│   ├── requirements.txt
+|   ├── traffic_analyzer.py 
+│   └── app.py                            # Main app
+│
+└── tests/                                # Tests
+    ├── __init__.py
+    ├── test_blob_storage.py
+    └── test_video_processing.py

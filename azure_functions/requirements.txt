@@ -1,0 +1,4 @@
+azure-storage-blob==12.16.0
+azure-servicebus==7.11.0
+azure-eventgrid==4.9.0
+opencv-python-headless==4.7.0.72

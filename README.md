@@ -36,6 +36,7 @@ This project uses Azure cloud services with a simplified architecture:
 1. Clone the repository
 
     git clone [https://github.com/yourusername/traffic-monitoring-system.git](https://github.com/yourusername/traffic-monitoring-system.git) 
+    
     cd traffic-monitoring-system
 
 2. Install dependencies
@@ -51,6 +52,7 @@ This project uses Azure cloud services with a simplified architecture:
 1. Start the Azure Function app
 
     cd azure_functions 
+    
     func start
     
 2. Run test scripts

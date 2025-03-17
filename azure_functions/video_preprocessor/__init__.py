@@ -55,7 +55,7 @@ def main(myblob: func.InputStream):
             
             # Upload segments
             segment_metadata = []
-            for segment_path, segment_number, start_frame in segments:  # Note the added start_frame here
+            for segment_path, segment_number, start_frame in segments:
                 # Extract the filename from the path
                 segment_filename = os.path.basename(segment_path)
                 
@@ -73,7 +73,7 @@ def main(myblob: func.InputStream):
                     'segment_id': str(uuid.uuid4()),
                     'video_id': video_id,
                     'segment_number': segment_number,
-                    'start_frame': start_frame,  # Store the start frame
+                    'start_frame': start_frame,
                     'blob_name': segment_filename,
                     'container_name': destination_container_name,
                     'start_time': (segment_number - 1) * int(os.environ.get('SEGMENT_DURATION_SECONDS', '120')),
@@ -155,7 +155,7 @@ def split_video_into_segments(video_path: str, segment_duration_seconds: int, vi
                 segment_start_frame = frame_count
                 current_segment_path = os.path.join(
                     temp_dir, 
-                    f"{video_id}-segment-{segment_number:03d}-frame{segment_start_frame:06d}.mp4"
+                    f"{video_id}_{segment_start_frame:06d}.mp4"
                 )
                 
                 # Create VideoWriter object
